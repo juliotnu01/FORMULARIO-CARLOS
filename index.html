@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript" src="index.js"></script>
+  <!-- <link rel="stylesheet" href="estilos.css" /> -->
+  <title>Formulario</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    label {
+      display: inline;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      width: 10px;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .form-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .form-line label {
+      /*      margin-right: 10px;*/
+    }
+
+    .form-line {
+      margin-bottom: 10px;
+    }
+
+    .form-line input[type="text"] {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #000;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .form-line span {
+      margin: 0 5px;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <div class="content">
+    <form id="form" action="send_mail.php" method="post" style="text-align: center">
+
+      <fieldset id="fieldset_1" style="
+            background-color: #6dc5ed;
+            border-radius: 10px;
+            border: solid #89b6d0;
+            color: #1e2692;
+          ">
+        <legend class="titles-sections-1" style="
+              color: black;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 24px;
+            ">
+          Customer Information
+        </legend>
+        <div>
+          <label class="subtitles" for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" name="customerName" required style="
+                background: white;
+                border-radius: 10px;
+                border: solid #cdcdcd 2px;
+              " />
+        </div>
+        <div>
+          <label class="subtitles" for="techName">Tech Name:</label>
+          <input type="text" id="techName" name="techName" required style="
+                background: white;
+                border-radius: 10px;
+                border: solid #cdcdcd 2px;
+              " />
+        </div>
+        <div style="display: flex; justify-content: space-around;">
+          <div>
+            <label class="subtitles" for="cat1">Category of Water:</label>
+            <input required type="radio" id="cat1" name="category-1" value="1" />
+          </div>
+          <div>
+            <label for="cat1">1</label>
+            <input required type="radio" id="cat1" name="category-1" value="2" />
+          </div>
+          <div>
+            <label for="cat2">2</label>
+            <input required type="radio" id="cat2" name="category-1" value="3" />
+          </div>
+          <div>
+            <label for="cat3">3</label>
+            <input required type="radio" id="cat3" name="category-1" value="3" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_2"
+        style="background-color: #e28080; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+        <legend class="titles-sections"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Room Dimensions </legend>
+        <legend class="titles-sections"
+          style=" color: black; font-family: Arial, Helvetica, sans-serif; font-size: 14px;">Room</legend>
+        <div style="padding: 5px; color: white;">
+          <div>
+            <label class="subtitles-room" for="roomLength" style="display: flex; justify-content: space-between;">
+              <div style="justify-self: center;">Room Length</div>
+              <div>(L):</div>
+            </label>
+            <input type="text" id="roomLength" name="roomLength" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class=" subtitles-room" for="roomWidth" style="display: flex; justify-content: space-between;">
+              <div style="justify-self: center;">Room Width</div>
+              <div>(W):</div>
+            </label>
+            <input type="text" id="roomWidth" name="roomWidth" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class=" subtitles-room" for="roomHeight" style="display: flex; justify-content: space-between;">
+              <div style="justify-self: center;"> Room Height</div>
+              <div>(H):</div>
+            </label>
+            <input type="text" id="roomHeight" name="roomHeight" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class=" subtitles-room" for="floorType">Floor Type:</label>
+            <select id="floorType" name="floorType" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;"">
+              <option value=" C">C = CarpetT-V = Vinyl tile</option>
+              <option value="V">V = VinylT = Ceramic tile</option>
+              <option value="L">L = LaminateW = Wood</option>
+              <option value="W">Co = Concrete</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_3"
+        style="background-color: #e76969; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+        <legend class="titles-sections"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Room Dimensions Offset
+        </legend>
+        <div style="color: white;">
+          <div>
+            <label class="subtitles-room" for="roomLength" style="display: flex; justify-content: space-between;">
+              <div> Room Length </div>
+              <div> (L):</div>
+            </label>
+            <input type="text" id="roomLength" name="roomLength" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+          <div>
+            <label class="subtitles-room" for="roomWidth" style="display: flex; justify-content: space-between;">
+              <div> Room Width</div>
+              <div> (W):</div>
+            </label>
+            <input type="text" id="roomWidth" name="roomWidth" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+          <div>
+            <label class="subtitles-room" for="roomHeight" style="display: flex; justify-content: space-between;">
+              <div> Room Height</div>
+              <div>(H):</div>
+            </label>
+            <input type="text" id="roomHeight" name="roomHeight" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+          <div>
+            <label class="subtitles-room" for="floorType">Floor Type:</label>
+            <select id="floorType" name="floorType" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+              <option value="C">C = CarpetT-V = Vinyl tile</option>
+              <option value="V">V = VinylT = Ceramic tile</option>
+              <option value="L">L = LaminateW = Wood</option>
+              <option value="W">Co = Concrete</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_4"
+        style="background-color: #e76969; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+        <legend class="titles-sections"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Room Dimensions Offset
+        </legend>
+        <div style="color: white;">
+
+          <div>
+            <label class="subtitles-room" for="roomLength" style="display: flex; justify-content: space-between;">
+              <div>Room Length </div>
+              <div>(L):</div>
+            </label>
+            <input type="text" id="roomLength" name="roomLength" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class="subtitles-room" for="roomLength" style="display: flex; justify-content: space-between;">
+              <div>Room Width</div>
+              <div>(W):</div>
+            </label>
+            <input type="text" id="roomWidth" name="roomWidth" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class="subtitles-room" for="roomLength" style="display: flex; justify-content: space-between;">
+              <div>Room Height</div>
+              <div>(H):</div>
+            </label>
+            <input type="text" id="roomHeight" name="roomHeight" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          </div>
+
+          <div>
+            <label class="subtitles-room" for="floorType">Floor Type:</label>
+            <select id="floorType" name="floorType" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+              <option value="C">C = CarpetT-V = Vinyl tile</option>
+              <option value="V">V = VinylT = Ceramic tile</option>
+              <option value="L">L = LaminateW = Wood</option>
+              <option value="W">Co = Concrete</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_5"
+        style="background-color: #2a80b9; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+        <legend class="titles-sections-equipment"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Equipment Placement</legend>
+        <fieldset id="fieldset_6"
+          style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: black;">
+
+          <div class="form-line" style="font-size: 12px;">
+            <label class="equipamientos-titulos" for="dehumidifierSize">Dehumidifier Mode/Size:</label>
+            <input type="text" id="dehumidifierSize" name="dehumidifierSize" placeholder="" required>
+          </div>
+
+          <div class="form-line" style=" color: #cecece; font-size: 10px; margin: 40px auto;">
+            <label class="ejemplos" for="dehumidifierEA"><span style="color: black;">Example:</span>
+              (____/______EA)__x____(________Days)</label>
+          </div>
+          <div class="form-line">
+            <input type="text" id="dehumidifierEA" name="dehumidifierEA" placeholder="(____/______EA)__" required>
+            <span>x</span>
+            <input type="text" id="dehumidifierDays" name="dehumidifierDays" placeholder="___(________Days)" required>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="fieldset_7"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <div class="form-line" style="display: flex; justify-content: space-around;">
+          <label class="equipamientos-titulos" for="dehumidifierSize">
+            Wall Drying <span class="checkOne">(checkOne)</span>
+          </label>
+          <div>
+            <input type="radio" id="cat1" name="category-2" value="1" style="width: 20px">
+            <label class="opciones" for="cat1">Injected</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-2" value="2" style="width: 20px">
+            <label class="opciones" for="cat2">Ducted</label>
+          </div>
+        </div>
+
+        <div class="form-line"
+          style="font-size: 10px; margin: 30px auto; display: flex; justify-content: normal; color: #cecece">
+          <label class="ejemplos" for="dehumidifierEA">
+            <span style="color: black;">Example:</span> (____/______EA)__x____(________Days)</label>
+        </div>
+
+        <div class="form-line" style="margin: 30px auto;">
+          <label class="equipamientos-titulos" for="dehumidifierSize">Other</label>
+          <input type="text" id="dehumidifierSize" name="dehumidifierSize" required>
+        </div>
+
+        <div class="form-line" style="font-size: 12px; color: #cecece; margin: 30px auto;">
+          <label class="ejemplos" for="dehumidifierEA"><span style="color: black;">Example:</span> (____EA) x
+            (_____Days)</label>
+        </div>
+
+
+        <div class="form-line" style="display: flex;">
+          <input type="text" id="dehumidifierEA" name="dehumidifierEA" placeholder="(____EA)" required>
+          <span>x</span>
+          <input type="text" id="dehumidifierDays" name="dehumidifierDays" placeholder="(_____Days)" required>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_8"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <div class="form-line" style="display: flex; justify-content: space-around; margin-bottom: 20px auto;">
+          <label class="equipamientos-titulos" for="airMover">Air Mover <span class="checkOne">(checkOne)</span></label>
+          <div>
+            <input type="radio" id="cat1" name="category-3" value="1">
+            <label class="opciones" for="cat1">Standard</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-3" value="2">
+            <label class="opciones" for="cat2">Axial</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-3" value="2">
+            <label class="opciones" for="cat2">Axial1HP</label>
+          </div>
+        </div>
+
+        <div class="form-line" style=" display: flex; justify-content: space-around; margin: 30px auto;">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+          <span>x</span>
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+        </div>
+        <div class="form-line" style="display: flex; justify-content: space-around; margin: 40px auto;">
+          <div style="width: 30%;">
+            <label class="equipamientos-titulos" for="eTES">E-TES (Electric):</label>
+          </div>
+          <div style="width: 70%; display: flex; justify-content: space-around;">
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+            <span>x</span>
+            <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+          </div>
+        </div>
+        <hr>
+        <div class="form-line" style="margin: 30px auto; display: flex; justify-content: space-around;">
+          <label class="equipamientos-titulos" for="airMover">
+            Air Scrubber
+            <span class="checkOne">
+              (CheckOne)
+            </span>
+          </label>
+          <div>
+            <input type="radio" id="cat1" name="category-4" value="1">
+            <label class="opciones-1" for="cat1">500CFM</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-4" value="2">
+            <label class="opciones-1" for="cat2">700 1399CFM</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-4" value="2">
+            <label class="opciones-1" for="cat2">1400+ CFM</label>
+          </div>
+        </div>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+          <span>x</span>
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+        </div>
+        <div class="form-line">
+          <label class="equipamientos-titulos">ReplacedsInternalFilter</label>
+          <input type="radio" id="cat1" name="category-5" value="1" required><br />
+          <label class="opciones" for="cat1">Yes</label>
+
+          <input type="radio" id="cat2" name="category-5" value="2" required><br />
+          <label class="opciones" for="cat2">No</label>
+        </div>
+
+      </fieldset>
+
+      <fieldset class="sin-id"
+        style="background-color: #85b2cf; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <div class="form-line" style="display: flex; justify-content: space-between; gap: 10px;">
+          <label class="equipamientos-titulos" for="dehumidifierSize">Other</label>
+          <input type="text" id="dehumidifierSize" name="dehumidifierSize" placeholder="" required
+            style=" background: white; border-radius: 5px; border: solid #cdcdcd 2px;">
+        </div>
+        <div class="form-line" style="color: #cecece; font-size: 14px;">
+          <label class="ejemplos" for="dehumidifierEA"><span style="color: #000;">Example:</span> (____EA) x
+            (_____Days)</label>
+        </div>
+        <div class="form-line" style="display: flex; justify-content: space-between; gap: 10px; ">
+          <input type="text" id="dehumidifierEA" name="dehumidifierEA" placeholder="(____EA)" required
+            style=" background: white; border-radius: 5px; border: solid #cdcdcd 2px;">
+          <span>x</span>
+          <input type="text" id="dehumidifierDays" name="dehumidifierDays" placeholder="(_____Days)" required
+            style=" background: white; border-radius: 5px; border: solid #cdcdcd 2px;">
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_9">
+        <div class="form-line">
+          <label class="equipamientos-titulos" for="airMover">TES/TEX:</label>
+          <input type="radio" id="cat1" name="category-6" value="1">
+          <label for="cat1">50 BTU</label>
+          <input type="radio" id="cat2" name="category-6" value="2">
+          <label for="cat2">80 BTU</label>
+        </div>
+
+
+
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+          <span>x</span>
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+        </div>
+
+
+
+        <hr>
+
+        <div class="form-line">
+          <label class="equipamientos-titulos" for="airMover">DecontaminateEquipament<br /><span
+              class="checkOne">(checkOne)</span></label>
+          <input type="radio" id="cat1" name="category-7" value="1">
+          <label for="cat1">Regular</label>
+          <input type="radio" id="cat2" name="category-7" value="2">
+          <label for="cat2">Heavy</label><br />
+
+        </div>
+      </fieldset>
+
+      
+
+
+    </form>
+    <div style="width: 100%; display: flex">
+      <button class="btn-enviar" id="submit" onclick="enviar();" style="    margin: 0 auto;
+      background-color: #3498db;
+      color: white;
+      padding: 5px 10px 5px 10px;
+      border: solid 2px #008bd8;
+      border-radius: 5px;">
+        Submit
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
