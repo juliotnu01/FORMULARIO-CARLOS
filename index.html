@@ -10,7 +10,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script type="text/javascript" src="index.js"></script>
-  <!-- <link rel="stylesheet" href="estilos.css" /> -->
+  <link rel="stylesheet" href="estilos.css" />
   <title>Formulario</title>
   <style>
     body {
@@ -349,18 +349,18 @@
         </div>
 
         <div class="form-line" style=" display: flex; justify-content: space-around; margin: 30px auto;">
-          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required>
           <span>x</span>
-          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required>
         </div>
         <div class="form-line" style="display: flex; justify-content: space-around; margin: 40px auto;">
           <div style="width: 30%;">
             <label class="equipamientos-titulos" for="eTES">E-TES (Electric):</label>
           </div>
           <div style="width: 70%; display: flex; justify-content: space-around;">
-            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required>
             <span>x</span>
-            <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+            <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required>
           </div>
         </div>
         <hr>
@@ -385,16 +385,16 @@
           </div>
         </div>
         <div class="form-line">
-          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required>
           <span>x</span>
-          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required>
         </div>
         <div class="form-line">
           <label class="equipamientos-titulos">ReplacedsInternalFilter</label>
-          <input type="radio" id="cat1" name="category-5" value="1" required><br />
+          <input type="radio" id="cat1" name="category-5" value="1" required>
           <label class="opciones" for="cat1">Yes</label>
 
-          <input type="radio" id="cat2" name="category-5" value="2" required><br />
+          <input type="radio" id="cat2" name="category-5" value="2" required>
           <label class="opciones" for="cat2">No</label>
         </div>
 
@@ -420,39 +420,438 @@
         </div>
       </fieldset>
 
-      <fieldset id="fieldset_9">
-        <div class="form-line">
+      <fieldset id="fieldset_9"
+        style="background-color: #85b2cf; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <div class="form-line" style="display: flex; justify-content: space-between;">
           <label class="equipamientos-titulos" for="airMover">TES/TEX:</label>
-          <input type="radio" id="cat1" name="category-6" value="1">
-          <label for="cat1">50 BTU</label>
-          <input type="radio" id="cat2" name="category-6" value="2">
-          <label for="cat2">80 BTU</label>
+          <div>
+            <input type="radio" id="cat1" name="category-6" value="1"
+              style=" background: white; border-radius: 5px; border: solid #cdcdcd 2px;">
+            <label for="cat1" style="color: #cecece;">50 BTU</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-6" value="2"
+              style=" background: white; border-radius: 5px; border: solid #cdcdcd 2px;">
+            <label for="cat2" style="color: #cecece;">80 BTU</label>
+          </div>
         </div>
 
-
-
-        <div class="form-line">
-          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required><br />
+        <div class="form-line" style="display: flex; justify-content: space-between; gap: 10px; ">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________EA)" required>
           <span>x</span>
-          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required><br />
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="(_______________Days)" required>
         </div>
-
-
 
         <hr>
 
-        <div class="form-line">
-          <label class="equipamientos-titulos" for="airMover">DecontaminateEquipament<br /><span
-              class="checkOne">(checkOne)</span></label>
-          <input type="radio" id="cat1" name="category-7" value="1">
-          <label for="cat1">Regular</label>
-          <input type="radio" id="cat2" name="category-7" value="2">
-          <label for="cat2">Heavy</label><br />
+        <div class="form-line" style="display: flex; justify-content: space-around;">
+          <label class="equipamientos-titulos" for="airMover">
+            DecontaminateEquipament
+            <spanclass="checkOne">(checkOne)</span>
+          </label>
+          <div>
+            <input type="radio" id="cat1" name="category-7" value="1">
+            <label for="cat1" style="color: #cecece;">Regular</label>
+          </div>
+          <div>
+            <input type="radio" id="cat2" name="category-7" value="2">
+            <label for="cat2" style="color: #cecece;">Heavy</label>
+          </div>
 
         </div>
       </fieldset>
 
-      
+      <fieldset id="fieldset_10"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 100px 0px;">
+        <div class="notas">
+          <h1 class="note">NOTE: A/H:AfterHrs - R/H: Regular Hrs</h1>
+        </div>
+        <h1 class="titulos-footer">Containment/DryingChamber</h1>
+      </fieldset>
+
+      <fieldset class="container-opcion" id="fieldset_11"
+        style="background-color: #92c5a9; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <label class="equipamientos-titulos" for="build-containment"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Build Containment</label>
+        <select id="build-containment" name="build-containment"
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_12"
+        style="background-color: #92c5a9; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <label class="equipamientos-titulos" for="zip-poles"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Zip Poles</label>
+        <select id="build-containment" name="build-containment"
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="EA" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <span>x</span>
+          <input type="text" id="airMoverDays" name="airMoverDays" placeholder="Days" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_13"
+        style="background-color: #92c5a9; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <label class="equipamientos-titulos" for="zippers"
+          style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Zippers</label>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="QTY" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_14"
+        style="background-color: #92c5a9; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <h1 class="titulos-footer">Content Manipulation</h1>
+        <fieldset id="fieldset_15"
+          style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+          <div class="form-line" style="display: flex; justify-content: space-around; margin: 0px 0px 20px 0px">
+            <label class="equipamientos-titulos" for="airMover">ContentsbyRoomSize (CheckOne):</label>
+            <div>
+              <input type="radio" id="cat1" name="category-8" value="1">
+              <label for="cat1">SML</label>
+            </div>
+
+            <div>
+              <input type="radio" id="cat1" name="category-8" value="1">
+              <label for="cat1">AVG</label>
+            </div>
+
+            <div>
+              <input type="radio" id="cat1" name="category-8" value="1">
+              <label for="cat1">LRG</label>
+            </div>
+
+            <div>
+              <input type="radio" id="cat1" name="category-8" value="1">
+              <label for="cat1">XL</label>
+            </div>
+          </div>
+          <select id="content-manipulation" name="content-manipulation" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <option value="A/H">A/H</option>
+            <option value="R/H">R/H</option>
+          </select>
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="fieldset_15"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; justify-content: space-around; margin: 0px 0px 20px 0px;">
+          <label class="equipamientos-titulos" for="airMover">ContentsbyRoomSize (CheckOne):</label>
+          <div>
+            <input type="radio" id="cat1" name="category-8" value="1">
+            <label for="cat1">SML</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-8" value="1">
+            <label for="cat1">AVG</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-8" value="1">
+            <label for="cat1">LRG</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-8" value="1">
+            <label for="cat1">XL</label>
+          </div>
+        </div>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="fieldset_17"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <label class="equipamientos-titulos" for="content-manipulation" style="margin: 30px 0px">Contents per hour:
+          HR(S)</label>
+        <select id="content-manipulation" name="content-manipulation"
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="fieldset_18"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line"
+          style="display: flex; justify-content: space-between; flex-direction: column; gap: 10px; ">
+          <label class="equipamientos-titulos" for="airMover" style="align-self: self-start;">Block/Pad:</label>
+          <select id="content-manipulation" name="content-manipulation" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <option value="A/H">A/H</option>
+            <option value="R/H">R/H</option>
+          </select>
+        </div>
+        <div style="display: flex; justify-content: start; ">
+          <div>
+            <input type="radio" id="cat1" name="category-9" value="1">
+            <label for="cat1">SML</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-9" value="1">
+            <label for="cat1">AVG</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-9" value="1">
+            <label for="cat1">LRG</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_19"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <label class="equipamientos-titulos" for="zippers">Protect (w/6mil plastic):</label>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(______SF)" required>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_20"
+        style="background-color: #92c5a9; border-radius: 10px; border: solid #89b6d0; color: balck;">
+        <h1 class="titulos-footer">Appliances</h1>
+        <fieldset id="fieldset_21"
+          style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+          <div class="form-line" style="display: flex; justify-content: space-between; flex-direction: column;">
+            <label class="equipamientos-titulos" for="airMover"
+              style="align-self: self-start; margin: 0px 0px 20px 0px;">Washer (checkone):</label>
+            <select id="content-manipulation" name="content-manipulation" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+              <option value="A/H">A/H</option>
+              <option value="R/H">R/H</option>
+            </select>
+          </div>
+          <div style="display: flex;">
+            <div>
+              <input type="radio" id="cat1" name="category-10" value="1">
+              <label for="cat1">Detach</label>
+            </div>
+            <div>
+              <input type="radio" id="cat1" name="category-10" value="1">
+              <label for="cat1">D/R</label>
+            </div>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="fieldset_22"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; flex-direction: column;">
+          <label class="equipamientos-titulos" for="airMover"
+            style="align-self: self-start; margin: 0px 0px 20px 0px; ">Dryer (checkone):</label>
+          <select id="content-manipulation" name="content-manipulation" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <option value="A/H">A/H</option>
+            <option value="R/H">R/H</option>
+          </select>
+        </div>
+        <div style="display: flex;">
+          <div>
+            <input type="radio" id="cat1" name="category-11" value="1">
+            <label for="cat1">Detach</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-11" value="1">
+            <label for="cat1">D/R</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset_23"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; justify-content: flex-start;">
+          <label class="equipamientos-titulos" for="airMover">Range:</label>
+          <div>
+            <input type="radio" id="cat1" name="category-12" value="1">
+            <label for="cat1">Gas</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-12" value="1">
+            <label for="cat1">Elec</label>
+          </div>
+        </div>
+        <div class="form-line">
+          <div style="display: flex; justify-content: flex-start;">
+            <label class="equipamientos-titulos" for="airMover">CheckOne:</label>
+            <div>
+              <input type="radio" id="cat1" name="category-13" value="1">
+              <label for="cat1">Detach</label>
+            </div>
+            <div>
+              <input type="radio" id="cat1" name="category-13" value="1">
+              <label for="cat1">D&R</label>
+            </div>
+          </div>
+        </div>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+
+      <fieldset id="fieldset_24"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; justify-content: space-around;">
+
+          <label class="equipamientos-titulos" for="airMover">Refrigerator: (checkone)</label>
+
+          <div>
+            <input type="radio" id="cat1" name="category-14" value="1">
+            <label for="cat1">Detach</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-14" value="1">
+            <label for="cat1">D&R</label>
+          </div>
+        </div>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+
+      <fieldset id="fieldset_25"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; justify-content: space-around;">
+          <label class="equipamientos-titulos" for="airMover">Dishwasher: (checkone)</label>
+          <div>
+            <input type="radio" id="cat1" name="category-15" value="1">
+            <label for="cat1">Detach</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-15" value="1">
+            <label for="cat1">D&R</label>
+          </div>
+        </div>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="fieldset_26"
+        style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
+        <div class="form-line" style="display: flex; justify-content: space-around;">
+          <label class="equipamientos-titulos" for="airMover">Disposer: </label>
+          <div>
+            <input type="radio" id="cat1" name="category-16" value="1">
+            <label for="cat1">Detach</label>
+          </div>
+          <div>
+            <input type="radio" id="cat1" name="category-16" value="1">
+            <label for="cat1">D&R</label>
+          </div>
+        </div>
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select>
+      </fieldset>
+
+      <fieldset id="fieldset_27">
+        <h1 class="titulos-footer">PumpingWater</h1>
+        <fieldset id="fieldset_28">
+          <div class="form-line">
+            <label class="equipamientos-titulos" for="airMover"> 2” Submersiblepump/hour </label>
+          </div>
+          <br /><select id="content-manipulation" name="content-manipulation" required><br />
+            <option value="A/H">A/H</option>
+            <option value="R/H">R/H</option>
+          </select><br />
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="fieldset_29">
+        <h1 class="titulos-footer">WaterExtraction</h1>
+        <fieldset id="fieldset_30">
+          <div class="form-line">
+            <label class="equipamientos-titulos" for="airMover">Carpet</label>
+          </div>
+          <input type="radio" id="cat1" name="category-16" value="1">
+          <label for="cat1">Regular </label>
+          <input type="radio" id="cat1" name="category-16" value="1">
+          <label for="cat1">Heavy</label>
+          <div class="form-line">
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(______SF)" required><br />
+          </div>
+          <br /><select id="content-manipulation" name="content-manipulation" required><br />
+            <option value="A/H">A/H</option>
+            <option value="R/H">R/H</option>
+          </select><br />
+        </fieldset>
+      </fieldset>
+
+      <fieldset id="fieldset_31">
+        <div class="form-line">
+          <label class="equipamientos-titulos" for="airMover">Hardfloor </label>
+        </div>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(______SF)" required><br />
+        </div>
+        <br /><select id="content-manipulation" name="content-manipulation" required><br />
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select><br />
+      </fieldset>
+
+      <fieldset id="fieldset_32">
+        <div class="form-line">
+          <label class="equipamientos-titulos" for="airMover"> Weight assisted </label>
+        </div>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(______SF)" required><br />
+        </div>
+        <br /><select id="content-manipulation" name="content-manipulation" required><br />
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select><br />
+      </fieldset>
+
+
+      <fieldset id="fieldset_33">
+        <div class="form-line">
+          <label class="equipamientos-titulos" for="airMover">Drill hols </label>
+        </div>
+        <div class="form-line">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(_________EA)" required><br />
+        </div>
+        <br /><select id="content-manipulation" name="content-manipulation" required><br />
+          <option value="A/H">A/H</option>
+          <option value="R/H">R/H</option>
+        </select><br />
+      </fieldset>
+
+
 
 
     </form>
