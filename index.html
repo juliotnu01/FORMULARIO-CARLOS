@@ -4,11 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <script type="text/javascript" src="index.js"></script>
   <title>Formulario</title>
   <style>
@@ -79,17 +74,10 @@
   <div class="content">
     <form id="form" action="send_mail.php" method="post" style="text-align: center">
 
-      <fieldset id="fieldset_1" style="
-            background-color: #6dc5ed;
-            border-radius: 10px;
-            border: solid #89b6d0;
-            color: #1e2692;
-          ">
-        <legend class="titles-sections-1" style="
-              color: black;
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 24px;
-            ">
+      <fieldset id="fieldset_1"
+        style=" background-color: #6dc5ed; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+        <legend class="titles-sections-1"
+          style=" color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">
           Customer Information
         </legend>
         <div>
@@ -98,7 +86,7 @@
                 background: white;
                 border-radius: 10px;
                 border: solid #cdcdcd 2px;
-              " />
+              ">
         </div>
         <div>
           <label class="subtitles" for="techName">Tech Name:</label>
@@ -106,24 +94,24 @@
                 background: white;
                 border-radius: 10px;
                 border: solid #cdcdcd 2px;
-              " />
+              ">
         </div>
         <div style="display: flex; justify-content: space-around;">
           <div>
             <label class="subtitles" for="cat1">Category of Water:</label>
-            <input required type="radio" id="cat1" name="category-1" value="1" />
+            <input required type="radio" id="cat1" name="category-1" value="1">
           </div>
           <div>
             <label for="cat1">1</label>
-            <input required type="radio" id="cat1" name="category-1" value="2" />
+            <input required type="radio" id="cat1" name="category-1" value="2">
           </div>
           <div>
             <label for="cat2">2</label>
-            <input required type="radio" id="cat2" name="category-1" value="3" />
+            <input required type="radio" id="cat2" name="category-1" value="3">
           </div>
           <div>
             <label for="cat3">3</label>
-            <input required type="radio" id="cat3" name="category-1" value="3" />
+            <input required type="radio" id="cat3" name="category-1" value="3">
           </div>
         </div>
       </fieldset>
@@ -218,8 +206,7 @@
         </div>
       </fieldset>
 
-      <fieldset id="fieldset_4"
-        style="background-color: #e76969; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
+      <fieldset id="fieldset_4" style="background-color: #e76969; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
         <legend class="titles-sections"
           style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Room Dimensions Offset
         </legend>
@@ -269,8 +256,7 @@
         style="background-color: #2a80b9; border-radius: 10px; border: solid #89b6d0; color: #1e2692;">
         <legend class="titles-sections-equipment"
           style="color: black; font-family: Arial, Helvetica, sans-serif; font-size: 24px;">Equipment Placement</legend>
-        <fieldset id="fieldset_6"
-          style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: black;">
+        <fieldset id="fieldset_6" style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: black;">
 
           <div class="form-line" style="font-size: 12px;">
             <label class="equipamientos-titulos" for="dehumidifierSize">Dehumidifier Mode/Size:</label>
@@ -446,7 +432,7 @@
         <div class="form-line" style="display: flex; justify-content: space-around;">
           <label class="equipamientos-titulos" for="airMover">
             DecontaminateEquipament
-            <spanclass="checkOne">(checkOne)</span>
+            <span class="checkOne">(checkOne)</span>
           </label>
           <div>
             <input type="radio" id="cat1" name="category-7" value="1">
@@ -1312,7 +1298,8 @@
       <fieldset id="fieldset_61"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Plasteroverlath </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1325,7 +1312,8 @@
       <fieldset id="fieldset_62"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Insulation </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1338,7 +1326,8 @@
       <fieldset id="fieldset_63"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Carpet </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1351,7 +1340,8 @@
       <fieldset id="fieldset_64"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Glued-downcarpet </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1364,7 +1354,8 @@
       <fieldset id="fieldset_65"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">CarpedPad </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1377,7 +1368,8 @@
       <fieldset id="fieldset_66"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">TackStrip </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1390,7 +1382,8 @@
       <fieldset id="fieldset_67"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Vinyl </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1403,7 +1396,8 @@
       <fieldset id="fieldset_68"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Vinyl composite tile </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1416,7 +1410,8 @@
       <fieldset id="fieldset_69"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Ceramicfloor tile </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1429,7 +1424,8 @@
       <fieldset id="fieldset_70"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Laminate </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1442,7 +1438,8 @@
       <fieldset id="fieldset_71"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Hardwood </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1459,7 +1456,8 @@
       <fieldset id="fieldset_72"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">1/4" Underlayment </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1472,7 +1470,8 @@
       <fieldset id="fieldset_73"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">3/4” Subfloor </label>
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1489,21 +1488,25 @@
           style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
           <label class="equipamientos-titulos" for="zippers">Ceilling </label>
           <div class="form-line">
-            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           </div>
           <label class="equipamientos-titulos" for="zippers">Wall </label>
           <div class="form-line">
-            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           </div>
           <label class="equipamientos-titulos" for="zippers">Floor </label>
           <div class="form-line">
-            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+            <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+              style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           </div>
-          <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <select id="content-manipulation" name="content-manipulation" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
             <option value="A/H">A/H</option>
             <option value="R/H">R/H</option>
           </select>
-          <div style="display: flex; justify-content: space-around;" >
+          <div style="display: flex; justify-content: space-around;">
             <div>
               <input type="radio" id="cat1" name="category-26" value="1">
               <label for="cat1">Non-Plan Based</label>
@@ -1525,8 +1528,10 @@
         <fieldset id="fieldset_77"
           style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
           <label class="equipamientos-titulos" for="zippers">Cleanwalls </label>
-          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
-          <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+          <select id="content-manipulation" name="content-manipulation" required
+            style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
             <option value="A/H">A/H</option>
             <option value="R/H">R/H</option>
           </select>
@@ -1537,8 +1542,10 @@
       <fieldset id="fieldset_78"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Clean Wall tile </label>
-        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1548,8 +1555,10 @@
       <fieldset id="fieldset_79"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Cleanfloor tile </label>
-        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1559,8 +1568,10 @@
       <fieldset id="fieldset_80"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Cleancarpet </label>
-        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1570,8 +1581,10 @@
       <fieldset id="fieldset_81"
         style="background-color: white; border-radius: 10px; border: solid #89b6d0; color: balck; padding: 50px 10px; ">
         <label class="equipamientos-titulos" for="zippers">Cleanfloor(subflr/other) </label>
-        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>
@@ -1584,7 +1597,8 @@
         <input type="text" id="airMoverEA" name="airMoverEA" placeholder="(________SF)">
         <p class="equipamientos-titulos">Or</p> <input type="text" id="airMoverEA" name="airMoverEA"
           placeholder="(________HRS)">
-        <select id="content-manipulation" name="content-manipulation" required style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
+        <select id="content-manipulation" name="content-manipulation" required
+          style=" background: white; border-radius: 10px; border: solid #cdcdcd 2px;">
           <option value="A/H">A/H</option>
           <option value="R/H">R/H</option>
         </select>

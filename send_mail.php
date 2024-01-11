@@ -1,5 +1,5 @@
 <?php
-
+require_once 'vendor/autoload.php';
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -13,19 +13,54 @@ require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 
-//Incluimos la librería
-require_once './html2pdf/src/Html2Pdf.php';
+// Ruta al archivo HTML que quieres convertir
+$htmlFilePath = 'index.html';
 
-//Recogemos el contenido de la vista
-// ob_start();
+// Contenido HTML del archivo
+$htmlContent = file_get_contents($htmlFilePath);
 
-$html = $_POST['json-field'];
+// Configuración de mPDF para permitir páginas más grandes
+$mpdfConfig = [
+  'mode' => 'utf-8',
+  'format' => 'A4',
+  'orientation' => 'P',
+  'margin_left' => 15,
+  'margin_right' => 15,
+  'margin_top' => 16,
+  'margin_bottom' => 16,
+  'margin_header' => 2,
+  'margin_footer' => 2,
+];
 
-//Pasamos esa vista a PDF
+// Crea una instancia de mPDF con la configuración personalizada
+$mpdf = new \Mpdf\Mpdf($mpdfConfig);
 
-//Le indicamos el tipo de hoja y la codificación de caracteres
-$mipdf = new HTML2PDF('L', 'A4', 'es', 'true', 'UTF-8');
-$mipdf->pdf->SetDisplayMode('fullpage');
+// Agrega el contenido HTML al PDF
+$mpdf->WriteHTML($htmlContent);
+
+// Ruta para guardar el PDF en la carpeta "carpeta_pdf"
+$pdfFilePath = 'pdfs/output.pdf';
+
+// Guarda el PDF en el archivo especificado
+$mpdf->Output($pdfFilePath, 'F');
+
+echo "PDF generado y guardado en: $pdfFilePath";
+
+
+// //Incluimos la librería
+// require_once './html2pdf/src/Html2Pdf.php';
+
+// //Recogemos el contenido de la vista
+// // ob_start();
+// $rutaHtml = 'index.html';
+
+// $contenidoHtml = file_get_contents($rutaHtml);
+
+// //Pasamos esa vista a PDF
+
+// //Le indicamos el tipo de hoja y la codificación de caracteres
+// $mipdf = new HTML2PDF('L', 'A4', 'es', 'true', 'UTF-8');
+// $mipdf->pdf->SetDisplayMode('fullpage');
 
 /*$mipdf->writeHTML('<link rel="stylesheet" href="estilos.css">');*/
 // $mipdf->writeHTML('<style>
@@ -89,13 +124,13 @@ $mipdf->pdf->SetDisplayMode('fullpage');
 //     }
 //   </style>');
 
-//Escribimos el contenido en el PDF
-$mipdf->writeHTML($html);
+// //Escribimos el contenido en el PDF
+// $mipdf->writeHTML($contenidoHtml);
 
-$currentDateTime = date("Ymd_His");
-$filename = 'D:\FORMULARIO CARLOS/pdfs/file_' . $currentDateTime . '.pdf';
-//Generamos el PDF
-$mipdf->Output($filename, 'F');
+// $currentDateTime = date("Ymd_His");
+// $filename = 'pdfs/file_' . $currentDateTime . '.pdf';
+// //Generamos el PDF
+// $mipdf->Output($nombrePdf, 'F');
 
 // exit();
 
@@ -133,44 +168,44 @@ foreach($tmp as $i){
 // file_put_contents($filename, $bin);
 
 
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-try {
-  //Server settings
-  $mail->SMTPDebug = 0;                                 // Enable verbose debug output
-  $mail->isSMTP();                                      // Set mailer to use SMTP
-  $mail->Host = 'smtp.titan.email';                  // Specify main and backup SMTP servers
-  $mail->SMTPAuth = true;                               // Enable SMTP authentication
-  $mail->Username = 'system@1-xactimate.com';             // SMTP username
-  $mail->Password = 'F0rmul4r10_';                           // SMTP password
-  $mail->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
-  $mail->Port = 465;                                    // TCP port to connect to
+// $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+// try {
+//   //Server settings
+//   $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+//   $mail->isSMTP();                                      // Set mailer to use SMTP
+//   $mail->Host = 'smtp.titan.email';                  // Specify main and backup SMTP servers
+//   $mail->SMTPAuth = true;                               // Enable SMTP authentication
+//   $mail->Username = 'system@1-xactimate.com';             // SMTP username
+//   $mail->Password = 'F0rmul4r10_';                           // SMTP password
+//   $mail->SMTPSecure = 'ssl';                            // Enable SSL encryption, TLS also accepted with port 465
+//   $mail->Port = 465;                                    // TCP port to connect to
 
-  //Recipients
-  $mail->setFrom('system@1-xactimate.com', 'No-Reply');          //This is the email your form sends From
-  $mail->addAddress('josemarcomg@gmail.com', 'Marco Moncada'); // Add a recipient address
-  $mail->addAddress('octavior128@gmail.com', 'Octavio'); // Add a recipient address
-  //$mail->addAddress('contact@example.com');               // Name is optional
-  //$mail->addReplyTo('info@example.com', 'Information');
-  //$mail->addCC('cc@example.com');
-  //$mail->addBCC('bcc@example.com');
+//   //Recipients
+//   $mail->setFrom('system@1-xactimate.com', 'No-Reply');          //This is the email your form sends From
+//   // $mail->addAddress('josemarcomg@gmail.com', 'Marco Moncada'); // Add a recipient address
+//   $mail->addAddress('nunezjuliot@gmail.com', 'Juliot'); // Add a recipient address
+//   //$mail->addAddress('contact@example.com');               // Name is optional
+//   //$mail->addReplyTo('info@example.com', 'Information');
+//   //$mail->addCC('cc@example.com');
+//   //$mail->addBCC('bcc@example.com');
 
-  // Attachments
-  $mail->addAttachment($filename);         // Add attachments
-  //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+//   // Attachments
+//   $mail->addAttachment($filename);         // Add attachments
+//   //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-  //Content
-  $mail->isHTML(true);                                  // Set email format to HTML
-  $mail->Subject = 'Form Filled';
-  $mail->Body    = '
-Hello, attached to this email is a PDF file with the completed form results.
+//   //Content
+//   $mail->isHTML(true);                                  // Set email format to HTML
+//   $mail->Subject = 'Form Filled';
+//   $mail->Body    = '
+// Hello, attached to this email is a PDF file with the completed form results.
 
-Please do not reply to this email, as it was sent by an automated system and there will be no response. For questions and/or clarifications, please contact us at josemarcomg@gmail.com or octavior128@gmail.com';
-  //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+// Please do not reply to this email, as it was sent by an automated system and there will be no response. For questions and/or clarifications, please contact us at josemarcomg@gmail.com or octavior128@gmail.com';
+//   //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-  $mail->send();
-  echo 'Message has been sent';
-  var_dump($html);
-} catch (Exception $e) {
-  echo 'Message could not be sent.';
-  echo 'Mailer Error: ' . $mail->ErrorInfo;
-}
+//   $mail->send();
+//   echo 'Message has been sent';
+//   var_dump($html);
+// } catch (Exception $e) {
+//   echo 'Message could not be sent.';
+//   echo 'Mailer Error: ' . $mail->ErrorInfo;
+// }
